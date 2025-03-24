@@ -1,0 +1,9 @@
+const mongoose = require("mongoose");
+
+// Connect to MongoDB
+mongoose
+  .connect("mongodb://127.0.0.1:27017/todoApp", {
+    serverSelectionTimeoutMS: 5000, // Timeout after 5 seconds
+  })
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.error("MongoDB connection error:", err));
